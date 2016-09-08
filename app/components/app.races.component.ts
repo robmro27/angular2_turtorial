@@ -13,4 +13,14 @@ export class RacesComponent {
     ngOnInit() {
         this.races = RACES;
     }
+    upQuantity(race) {
+        if (race.quantity < race.inStock) {
+            race.quantity++;
+        }
+    }
+    downQuantity(race) {
+        if(race.quantity > 0) {
+            race.quantity--;
+        }
+    }
 }

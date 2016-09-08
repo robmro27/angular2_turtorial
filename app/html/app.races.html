@@ -1,10 +1,14 @@
 <ul>
-    <li *ngFor="let race of races">
+    <li *ngFor="let race of races" [class.racing]="race.isRacing">
       <h2>{{race.name|uppercase}}</h2>
       <p>{{race.date}}</p>
       <p>{{race.about}}</p>
       <button *ngIf="!race.isRacing" >Enter Race</button>
       <h3 *ngIf="race.isRacing">Already Racing</h3>
       <p>{{race.price|currency:'EUR':true}}</p>
+      <p>{{race.inStock}}</p>
+      <button class="decrease" (click)="downQuantity(race)">-</button>
+      <button class="increase" (click)="upQuantity(race)">+</button>
+      <p>Ordered quantity: {{race.quantity}}</p>
     </li>
 </ul>

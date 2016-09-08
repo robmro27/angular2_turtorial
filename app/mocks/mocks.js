@@ -6,7 +6,8 @@ exports.RACES = [{
         "entryFee": 3200,
         "isRacing": false,
         "price": 8.99,
-        "inStock": 35
+        "inStock": 35,
+        "quantity": 0
     }, {
         "id": 2,
         "name": "San Francisco Ruins",
@@ -14,7 +15,8 @@ exports.RACES = [{
         "entryFee": 4700,
         "isRacing": true,
         "price": 9.99,
-        "inStock": 45
+        "inStock": 45,
+        "quantity": 0
     }, {
         "id": 3,
         "name": "New York City Skyline",
@@ -22,6 +24,7 @@ exports.RACES = [{
         "entryFee": 4300,
         "isRacing": false,
         "price": 12.99,
-        "inStock": 55
+        "inStock": 55,
+        "quantity": 0
     }];
 //# sourceMappingURL=mocks.js.map

@@ -6,4 +6,5 @@ export class Race {
     isRacing: boolean;
     price: number;
     inStock: number;
+    quantity: number;
 }

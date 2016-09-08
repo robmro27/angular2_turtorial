@@ -16,6 +16,16 @@ var RacesComponent = (function () {
     RacesComponent.prototype.ngOnInit = function () {
         this.races = mocks_1.RACES;
     };
+    RacesComponent.prototype.upQuantity = function (race) {
+        if (race.quantity < race.inStock) {
+            race.quantity++;
+        }
+    };
+    RacesComponent.prototype.downQuantity = function (race) {
+        if (race.quantity > 0) {
+            race.quantity--;
+        }
+    };
     RacesComponent = __decorate([
         core_1.Component({
             selector: 'races',
