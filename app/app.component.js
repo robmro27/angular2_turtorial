@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var app_races_component_1 = require('./app.races.component');
+var app_races_component_1 = require('./components/app.races.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.heading = "Ultra Racing Schedule";

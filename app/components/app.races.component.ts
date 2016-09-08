@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Race } from './class/race';
-import { RACES } from './mocks/mocks';
+import { RACES } from './../mocks/mocks';
 
 @Component({
     selector: 'races',
