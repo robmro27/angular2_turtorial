@@ -4,8 +4,8 @@ import { RACES } from './../mocks/mocks';
 
 @Component({
     selector: 'races',
-    templateUrl: './app/app.races.html',
-    stylesUrls:['./app/app.races.css'] 
+    templateUrl: './app/html/app.races.html',
+    stylesUrls:['./app/css/app.races.css'] 
 })
 
 export class RacesComponent {

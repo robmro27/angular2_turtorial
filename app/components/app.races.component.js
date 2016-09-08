@@ -19,8 +19,8 @@ var RacesComponent = (function () {
     RacesComponent = __decorate([
         core_1.Component({
             selector: 'races',
-            templateUrl: './app/app.races.html',
-            stylesUrls: ['./app/app.races.css']
+            templateUrl: './app/html/app.races.html',
+            stylesUrls: ['./app/css/app.races.css']
         }), 
         __metadata('design:paramtypes', [])
     ], RacesComponent);
