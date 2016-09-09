@@ -9,12 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mocks_1 = require('./../mocks/mocks');
+var race_1 = require('../services/race');
 var RacesComponent = (function () {
-    function RacesComponent() {
+    function RacesComponent(RaceDataService) {
+        this.RaceDataService = RaceDataService;
     }
     RacesComponent.prototype.ngOnInit = function () {
-        this.races = mocks_1.RACES;
+        var _this = this;
+        this.RaceDataService.getRaces()
+            .subscribe(function (races) { return _this.races = races; });
     };
     RacesComponent.prototype.upQuantity = function (race) {
         if (race.quantity < race.inStock) {
@@ -30,9 +33,9 @@ var RacesComponent = (function () {
         core_1.Component({
             selector: 'races',
             templateUrl: './app/html/app.races.html',
-            stylesUrls: ['./app/css/app.races.css']
+            stylesUrls: ['./app/css/app.races.css'],
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [race_1.RaceDataService])
     ], RacesComponent);
     return RacesComponent;
 }());

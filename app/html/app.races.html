@@ -7,8 +7,8 @@
       <h3 *ngIf="race.isRacing">Already Racing</h3>
       <p>{{race.price|currency:'EUR':true}}</p>
       <p>{{race.inStock}}</p>
-      <button class="decrease" (click)="downQuantity(race)">-</button>
       <button class="increase" (click)="upQuantity(race)">+</button>
-      <p>Ordered quantity: {{race.quantity}}</p>
+      <input class="number" [(ngModel)]="race.quantity"/>
+      <button class="decrease" (click)="downQuantity(race)">-</button>
     </li>
 </ul>

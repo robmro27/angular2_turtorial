@@ -5,21 +5,21 @@ import { RacesComponent } from './components/app.races.component';
   selector: 'racing-app',
   template: `
   <h1>{{heading}}</h1>\n\
-  <p>There are {{totalCarParts()}} total parts in stock.</p>
+  <p>There are {{totalQty()}} total parts in stock.</p>
   <races></races>`,
-  directives:[RacesComponent]
+  directives:[RacesComponent],
 })
 
 export class AppComponent {
-  heading = "Ultra Racing Schedule"
-  totalCarParts() {
+  heading = "Ultra Racing Schedule (sample angular2 app)"
+  totalQty() {
       let sum = 0;
-      for (let carPart of this.carParts) {
-          sum += carPart.inStock
+      for (let parts of this.parts) {
+          sum += parts.inStock
       }
       return sum;
   }
-  carParts = [
+  parts = [
     {"inStock": 20},
     {"inStock": 40},
     {"inStock": 50},

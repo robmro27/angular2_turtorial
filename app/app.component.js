@@ -12,26 +12,26 @@ var core_1 = require('@angular/core');
 var app_races_component_1 = require('./components/app.races.component');
 var AppComponent = (function () {
     function AppComponent() {
-        this.heading = "Ultra Racing Schedule";
-        this.carParts = [
+        this.heading = "Ultra Racing Schedule (sample angular2 app)";
+        this.parts = [
             { "inStock": 20 },
             { "inStock": 40 },
             { "inStock": 50 },
         ];
     }
-    AppComponent.prototype.totalCarParts = function () {
+    AppComponent.prototype.totalQty = function () {
         var sum = 0;
-        for (var _i = 0, _a = this.carParts; _i < _a.length; _i++) {
-            var carPart = _a[_i];
-            sum += carPart.inStock;
+        for (var _i = 0, _a = this.parts; _i < _a.length; _i++) {
+            var parts = _a[_i];
+            sum += parts.inStock;
         }
         return sum;
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'racing-app',
-            template: "\n  <h1>{{heading}}</h1>\n  <p>There are {{totalCarParts()}} total parts in stock.</p>\n  <races></races>",
-            directives: [app_races_component_1.RacesComponent]
+            template: "\n  <h1>{{heading}}</h1>\n  <p>There are {{totalQty()}} total parts in stock.</p>\n  <races></races>",
+            directives: [app_races_component_1.RacesComponent],
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

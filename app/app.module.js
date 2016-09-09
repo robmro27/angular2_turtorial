@@ -9,17 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var forms_1 = require('@angular/forms');
+var http_1 = require('@angular/http');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var app_races_component_1 = require('./components/app.races.component');
+var race_1 = require('./services/race');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
             declarations: [app_component_1.AppComponent, app_races_component_1.RacesComponent],
-            bootstrap: [app_component_1.AppComponent, app_races_component_1.RacesComponent]
+            bootstrap: [app_component_1.AppComponent, app_races_component_1.RacesComponent],
+            providers: [race_1.RaceDataService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
